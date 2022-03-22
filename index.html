@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>ページタイトル</title>
+<meta name="robots" content="All">
+</head>
+
+<body>
+<center>
+	<h1>パスワード認証</h1>
+	<h2>パスワードは<font color="red">数字4桁</font>です。</h2><br>
+	<h3>当ててみろかすかす死ね死ね</h3>
+	<div style="border: orange solid 3px; font-size: 100%; padding: 20px;">
+<!---- フォーム ---->
+<form name="myForm">
+<input type="text" name="txtURL">
+<br>
+<input type="button" value="確定"
+onclick="Jump();">
+</form>
+
+<!---- スクリプト ---->
+<script type="text/javascript">
+/*====[ 関数 : URL を取得して移動 ]====*/
+function Jump(){
+// テキストを取得して URL を組み立てる
+var myURL =
+"https://sheltered-ridge-37241.herokuapp.com/" +
+document.myForm.txtURL.value +
+".html";
+// ページを移動
+location.href = myURL;
+return;
+}
+</script>
+</div>
+</center>
+</body>
+
+</html>
